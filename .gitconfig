@@ -1,0 +1,27 @@
+[url "git@github.com:"]
+        insteadOf = https://github.com/
+ 
+[url "git@gitlab.com:"]
+        insteadOf = https://gitlab.com/
+ 
+[url "git@cl.githost.io:"]
+        insteadOf = https://cl.githost.io/
+
+[core]
+        editor = vim
+[commit]
+        gpgsign = true
+[alias]
+        sw = switch
+        re = restore
+        br = branch
+        ci = commit
+        st = status
+        pushf = push --force-with-lease
+        pushb = !git push --set-upstream origin `git rev-parse --abbrev-ref HEAD`
+        amend = commit --amend --no-edit
+        rebase-onto-master = !git fetch origin master:master && git rebase master && git push --force-with-lease
+        hist = log --graph --date=short --decorate -n 10
+        alias = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
+        removebranches = !git fetch -p origin && git branch -vv | awk '/: gone]/{print $1}' | xargs git branch -D
+        done = !git checkout master && git pull && git removebranches
