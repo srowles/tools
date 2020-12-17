@@ -1,0 +1,33 @@
+{
+    "window.zoomLevel": 3,
+    "workbench.startupEditor": "newUntitledFile",
+    "importSorter.generalConfiguration.sortOnBeforeSave": true,
+    "importSorter.importStringConfiguration.trailingComma": "multiLine",
+    "importSorter.importStringConfiguration.maximumNumberOfImportExpressionsPerLine.count": 1,
+    "importSorter.importStringConfiguration.tabSize": 2,
+    "importSorter.importStringConfiguration.maximumNumberOfImportExpressionsPerLine.type": "words",
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "files.insertFinalNewline": true,
+    "go.autocompleteUnimportedPackages": true,
+    "go.useCodeSnippetsOnFunctionSuggest": true,
+    "go.formatTool": "goimports",
+    "go.formatFlags": [
+        "-local", "gitlab.infosum.io/infosum"
+    ],
+    "protoc": {
+        "options": [
+            "--proto_path=${workspaceRoot}/",
+            "--proto_path=${env.GOPATH}/src"
+        ]
+    },
+    "editor.fontLigatures": true,
+    "go.coverOnSingleTest": true,
+    "go.testTimeout": "60s",
+    "liveshare.increasedGuestLimit": false,
+    "liveshare.guestApprovalRequired": true,
+    "liveshare.openSharedServers": false,
+    "liveshare.autoShareServers": false,
+    "python.showStartPage": false,
+    "go.coverageOptions": "showUncoveredCodeOnly",
+    "go.coverOnSingleTestFile": true
+}
